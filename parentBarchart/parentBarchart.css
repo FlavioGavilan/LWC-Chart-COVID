@@ -1,0 +1,22 @@
+.container{
+    border: 1px solid;
+    width:  100%;
+    /*height: 100%;*/
+}
+.div-grid1, .div-grid2, .div-parametros{
+    border: 3px solid violet;
+    width:  95%;
+    /*height: 500px;*/
+    margin-left: 1%;
+    
+}
+.div-cases, .div-deaths, .div-suspects, .div-refuses{
+    border: 1px solid red;
+    width:  100%;
+    margin-left: 1%;
+}
+.div-data-inicial, .div-data-final{
+    border: 1px solid red;
+    width:  100%;    
+    margin-left: 1%;    
+}

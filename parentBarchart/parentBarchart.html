@@ -1,0 +1,54 @@
+<template>
+    <div class="container">
+        <div class="slds-grid slds-gutters div-parametros">
+            <div class="slds-col div-data-inicial">
+                <lightning-card title="Escolha a data inicial">
+                    <lightning-input type="date" name="dateStart" 
+                            value="2020-09-07">
+                        </lightning-input>
+                </lightning-card>
+            </div>
+            <div class="slds-col div-data-final">
+                <lightning-card title="Escolha a data final">
+                    <lightning-input type="date" name="dateEnd" 
+                            value="2020-09-07">
+                        </lightning-input>
+                </lightning-card>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-gutters div-grid1">            
+                <div class="slds-col div-cases">
+                    <lightning-card title="Gráfico COVID-19 - Casos" icon-name="utility:chart">
+                        <template if:true={chartConfigurationCases}>
+                            <c-childbarchart chart-config={chartConfigurationCases}></c-childbarchart>
+                        </template>
+                    </lightning-card> 
+                </div>                                        
+                <div class="slds-col div-deaths">
+                    <lightning-card title="Gráfico COVID-19 - Mortes" icon-name="utility:chart">
+                        <template if:true={chartConfigurationDeaths}>
+                            <c-childbarchart chart-config={chartConfigurationDeaths}></c-childbarchart>
+                        </template>
+                    </lightning-card> 
+                </div>            
+        </div>
+
+        <div class="slds-grid slds-gutters div-grid2">            
+                <div class="slds-col div-suspects">
+                    <lightning-card title="Gráfico COVID-19 - Suspeitas" icon-name="utility:chart">
+                        <template if:true={chartConfigurationSuspects}>
+                            <c-childbarchart chart-config={chartConfigurationSuspects}></c-childbarchart>
+                        </template> 
+                    </lightning-card>
+                </div>                                        
+                <div class="slds-col div-refuses">
+                    <lightning-card title="Gráfico COVID-19 - Não Confirmados" icon-name="utility:chart">
+                        <template if:true={chartConfigurationRefuses}>
+                            <c-childbarchart chart-config={chartConfigurationRefuses}></c-childbarchart>
+                        </template> 
+                    </lightning-card>
+                </div>            
+        </div>             
+    </div> 
+</template>
